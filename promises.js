@@ -26,11 +26,11 @@ f();
 
 // Fetch remote data using async/await
 
-async function fetchCity(name) {
+async function fetchCity(){
     const res = await fetch(`https://geocode.xyz/seattle?json=1`);
 
     const data = await res.json();
-    console.log(data);
+    console.log(data.latt, data.longt);
 }
 
-fetchCity("Seattle");
+fetchCity();
